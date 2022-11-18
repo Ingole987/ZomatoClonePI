@@ -20,15 +20,15 @@ zomatoPI.get("/" , (req,res) => {
 const PORT = 4000;
 
 zomatoPI.listen(PORT, () => {
-//    ConnectDB()
-//    .then(() => {
-//     console.log("Server is running !!")
-//    })
+   ConnectDB()
+   .then(() => {
+    console.log("Server is running !!")
+   })
 
-//    .catch((error) => {
-//     console.log("Server is running, but DB connection failed")
-//     console.log(error)
-//    })
+   .catch((error) => {
+    console.log("Server is running, but DB connection failed")
+    console.log(error)
+   })
 
-   console.log("Server is running !!")
+//    console.log("Server is running !!")
 }) 
