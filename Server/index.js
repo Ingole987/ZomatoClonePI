@@ -5,6 +5,8 @@ import dotenv from 'dotenv'
 
 import ConnectDB from "./database/connection"
 
+import Auth from "./api/auth"
+
 dotenv.config()
 
 const zomatoPI = express()
@@ -16,6 +18,8 @@ zomatoPI.get("/" , (req,res) => {
         message : "Server is running"
     })
 })
+
+zomatoPI.use("/auth", Auth)
 
 const PORT = 4000;
 
